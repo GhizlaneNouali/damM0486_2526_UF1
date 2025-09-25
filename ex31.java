@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class ex23 {
+public class ex31 {
     public static void main(String[] args){
 
         int codi = ThreadLocalRandom.current().nextInt(1, 4);
