@@ -1,4 +1,4 @@
-package MP06;
+
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -44,6 +44,6 @@ public class ex22 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        sc.close();
     }
 }

@@ -32,7 +32,8 @@ public class ex41 {
                     System.out.println("Accés correcte al sistema");
                 } else {
                     System.out.println("Accés no concedit: La contrasenya no és correcte");
-                }       
+                }    
+                ois.close();   
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
@@ -57,5 +58,7 @@ public class ex41 {
                 System.out.println("--");
             }
         }
+
+        sc.close();
     }
 }

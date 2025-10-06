@@ -1,4 +1,4 @@
-package MP06;
+
 
 import java.io.File;
 
