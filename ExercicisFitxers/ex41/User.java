@@ -1,4 +1,4 @@
-package ex41;
+package ExercicisFitxers.ex41;
 
 import java.io.Serializable;
 

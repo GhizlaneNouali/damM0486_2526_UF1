@@ -1,4 +1,4 @@
-package ex41;
+package ExercicisFitxers.ex41;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -47,7 +47,7 @@ public class ex41 {
 
                 try {
                     ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(nom_arxiu)));
-                    User usr = new User(user, password);
+                      User usr = new User(user, password);
                     oos.writeObject(usr);
                     System.out.println("Usuari creat correctament!\nBenvingut! " + usr.nom);
                     oos.close();

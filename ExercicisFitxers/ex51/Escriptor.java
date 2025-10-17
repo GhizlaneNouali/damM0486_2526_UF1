@@ -1,10 +1,9 @@
-package ex51;
+package ExercicisFitxers.ex51;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class Lectura {
-    public class EscriptorRandomAccessFile {
+public class Escriptor {
 
 	public static void main(String[] args) {
 		Pais[] paisos = new Pais[5];
@@ -37,7 +36,5 @@ public class Lectura {
 		} catch (IOException e) {
 			System.err.println(e);
 		}
-	}
-}
-
+	}	
 }

@@ -1,4 +1,4 @@
-package ex51;
+package ExercicisFitxers.ex51;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;

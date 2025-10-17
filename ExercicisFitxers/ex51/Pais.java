@@ -1,4 +1,4 @@
-package ex51;
+package ExercicisFitxers.ex51;
 
 public class Pais {
 	private String nom;
