@@ -15,5 +15,12 @@ public class User implements Serializable {
         this.admin = admin;
         this.punts = punts;
     }
+    public String getNom(){
+        return nom;
+    }
+
+
+    
+
 }
 	
