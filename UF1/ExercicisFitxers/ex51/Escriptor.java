@@ -20,17 +20,17 @@ public class Escriptor {
 		paisos[4].setPoblacio(8196411);
 
 		StringBuilder b = null;
-		try (RandomAccessFile fitxer = new RandomAccessFile("paisos.dat", "rw");) {
+		try (RandomAccessFile raf = new RandomAccessFile("paisos.dat", "rw");) {
 			for (int i=0; i<paisos.length; i++) {
 				b = new StringBuilder(paisos[i].getNom());
 				b.setLength(40); //Asigna mida de 40 caracters al contingut de StringBuilder
-				fitxer.writeInt(i+1);						//id  ------> int  (4 bytes)
-				fitxer.writeChars(b.toString());			//nom ------> char (2 bytes) * 40 caràcters
-				fitxer.writeChars(paisos[i].getCodiISO());	//Codi ISO -> char (2 bytes) * 3 caràcters
+				raf.writeInt(i+1);						//id  ------> int  (4 bytes)
+				raf.writeChars(b.toString());			//nom ------> char (2 bytes) * 40 caràcters
+				raf.writeChars(paisos[i].getCodiISO());	//Codi ISO -> char (2 bytes) * 3 caràcters
 				b = new StringBuilder(paisos[i].getCapital());
 				b.setLength(40);
-				fitxer.writeChars(b.toString());			//Capital --> char (2 bytes) * 40 caràcters
-				fitxer.writeInt(paisos[i].getPoblacio());	//població -> int  (4 bytes)
+				raf.writeChars(b.toString());			//Capital --> char (2 bytes) * 40 caràcters
+				raf.writeInt(paisos[i].getPoblacio());	//població -> int  (4 bytes)
 												//total per país: 174 bytes
 			} // Total: 174 bytes * 5 països = 870 bytes
 		} catch (IOException e) {
