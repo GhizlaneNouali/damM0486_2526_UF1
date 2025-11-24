@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class LecturaParaula {
 
@@ -39,4 +40,35 @@ public class LecturaParaula {
 
         return paraules;
     }
+
+    public Paraula llegirParaulaRandom() {
+    long midaRegistre = 44;
+
+    try (RandomAccessFile raf = new RandomAccessFile("paraules.dat", "r")) {
+
+        long numParaules = raf.length() / midaRegistre;
+
+        if (numParaules == 0) return null;
+
+        Random random = new Random();
+        int index = random.nextInt((int) numParaules);
+
+        raf.seek(index * midaRegistre);
+
+        StringBuilder nom = new StringBuilder();
+        for (int j = 0; j < 20; j++) {
+            nom.append(raf.readChar());
+        }
+        String text = nom.toString().trim();
+
+        int puntuacio = raf.readInt();
+
+        return new Paraula(text, puntuacio);
+
+    } catch (IOException e) {
+        System.err.println("Error llegint paraula random: " + e.getMessage());
+        return null;
+    }
+}
+
 }

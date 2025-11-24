@@ -120,10 +120,12 @@ public class PenjatController {
             return;
         }
 
-        // Escollim una paraula aleatòria
-        Random random = new Random();
-        Paraula p = llista.get(random.nextInt(llista.size()));
-        // Paraula p = llegirParaula(random);
+        //Random random = new Random();
+        // Paraula p = llista.get(random.nextInt(llista.size()));
+
+        LecturaParaula lectura = new LecturaParaula();
+        Paraula p = lectura.llegirParaulaRandom();
+        
         String paraula = p.getParaula();
 
         char[] paraulaArray = paraula.toCharArray();
