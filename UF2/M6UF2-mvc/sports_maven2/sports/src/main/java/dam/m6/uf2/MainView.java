@@ -14,7 +14,7 @@ public class MainView {
     public int mainMenu() {
         // TODO Auto-generated method stub
         System.out.println(
-                "\nMENU PRINCIPAL\n1. Llistar esports\n2. Afegir Esport\n3. Llistar atletes per esport\n4. Afegir atleta\n\n0 Sortir --> conn.close()");
+                "\nMENU PRINCIPAL\n1. Llistar esports\n2. Afegir Esport\n3. Llistar atletes per esport\n4. Afegir atleta\n5. Llistar atletes per nom\n\n0 Sortir --> conn.close()");
         int option = Integer.parseInt(sc.nextLine()); 
 
         return option;
@@ -39,7 +39,7 @@ public class MainView {
     public void showDeportistas(List<deportista> list) {
         System.out.println("\n=== Llistat de deportistas ===");
         for (deportista d : list) {
-            System.out.println(d.getNom() + "\t" + d.getCodi() + "\tEsport ID: " + d.getEsport_id());
+            System.out.println(d.getNom() + "\t" + d.getCodi() + "\tEsport nom: " + d.getEsport_nom());
         }
     }
 
@@ -58,10 +58,15 @@ public class MainView {
         System.out.println("\n--- Formulari afegir atleta ---");
         System.out.print("Nom de l’atleta: ");
         String nom = sc.nextLine();
-        System.out.print("Codi de l’atleta: ");
-        String codi = sc.nextLine();
+        // System.out.print("Codi de l’atleta: ");
+        // String codi = sc.nextLine();
 
-        return new deportista(nom, codi, esportId);
+        return new deportista(nom, null, esportId);
+    }
+
+    public String demanarNomAtleta(){
+        System.out.print("Introdueix el nom de l'atleta: ");
+        return sc.nextLine();
     }
 
 }

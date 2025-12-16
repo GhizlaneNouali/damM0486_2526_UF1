@@ -1,5 +1,8 @@
 package dam.m6.uf2;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import java.sql.Connection;
 
 public class Controller {
@@ -26,10 +29,10 @@ public class Controller {
 				case 1:
 					mainView.showdDeporte(deporteDAO.getAll());
 					break;
-	
+
 				case 2:
 					deporte nouDeporte = mainView.addDeporteForm();
-	
+
 					if (nouDeporte != null && nouDeporte.getNom() != null && !nouDeporte.getNom().isBlank()) {
 						deporteDAO.add(nouDeporte);
 						System.out.println("Esport afegit correctament!");
@@ -54,17 +57,24 @@ public class Controller {
 					mainView.showDeportistas(deportistaDAO.llista_deportistasPerID(esport_id2));
 					break;
 
+				case 5:
+					String nom = mainView.demanarNomAtleta();
+					List<deportista> llistaAtletes = deportistaDAO.llistaDeportistasPerNom(nom);
+					mainView.showDeportistas(llistaAtletes);
+					break;
+
 				case 0:
 					System.out.println("sortint...");
 					break;
-	
+
 				default:
 					System.out.println("Opció no valida");
 			}
 		} while (option != 0);
 		try {
-			if (conn != null) conn.close();
-		} catch (Exception e){
+			if (conn != null)
+				conn.close();
+		} catch (Exception e) {
 			System.err.println("Error tencant");
 		}
 	}

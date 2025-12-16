@@ -50,9 +50,11 @@ public class deportistaPgDAO implements DAO<deportista> {
                 while (rs.next()) {
                     String nom = rs.getString("nom");
                     String codi = rs.getString("codi");
+                    String nomEsport = rs.getString("esport_nom");
                     int esport_id = esportId;
 
                     deportista d = new deportista(nom, codi, esport_id);
+                    d.setEsport_nom(nomEsport);
                     deportistas.add(d);
                 }
             }
@@ -66,6 +68,9 @@ public class deportistaPgDAO implements DAO<deportista> {
 
     @Override
     public void add(deportista item) {
+        String codiGenerat = generarCodi();
+        item.setCodi(codiGenerat);
+
         String sql = "INSERT INTO atleta (nom, codi, esport_id) VALUES (?,?,?)";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -78,4 +83,63 @@ public class deportistaPgDAO implements DAO<deportista> {
             System.err.println("Error al afegir un deportista " + e.getMessage());
         }
     }
+
+    private String generarCodi() {
+        String sql = "SELECT MAX(codi) FROM atleta";
+        try (PreparedStatement stmt = conn.prepareStatement(sql);
+                ResultSet rs = stmt.executeQuery()) {
+
+            if (rs.next()) {
+                String maxCodi = rs.getString(1);
+
+                if (maxCodi == null)
+                    return "A001";
+
+                String lletra = maxCodi.substring(0, 1);
+                String nums = maxCodi.substring(1);
+
+                int num = Integer.parseInt(nums);
+                num++;
+
+                return lletra + String.format("%03d", num);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error generant codi: " + e.getMessage());
+        }
+
+        return "A001";
+    }
+
+    public List<deportista> llistaDeportistasPerNom(String text) {
+        List<deportista> deportistas = new ArrayList<>();
+        String sql = "SELECT a.id, a.nom, a.codi, a.esport_id, e.nom AS esport_nom " +
+                "FROM atleta a " +
+                "JOIN esport e ON e.id = a.esport_id " +
+                "WHERE a.nom ILIKE ? " +
+                "ORDER BY a.nom";
+
+        try (PreparedStatement stat = conn.prepareStatement(sql)) {
+            stat.setString(1, "%" + text + "%");
+
+            try (ResultSet rs = stat.executeQuery()) {
+                while (rs.next()) {
+                    int id = rs.getInt("id");
+                    String nom = rs.getString("nom");
+                    String codi = rs.getString("codi");
+                    String nomEsport = rs.getString("esport_nom");
+                    int esport_id = rs.getInt("esport_id");
+
+                    deportista d = new deportista(id, nom, codi, esport_id);
+                    d.setEsport_nom(nomEsport);
+                    deportistas.add(d);
+                }
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al buscar deportistas per nom: " + e.getMessage());
+        }
+        return deportistas;
+    }
+
 }
