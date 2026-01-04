@@ -1,0 +1,5 @@
+04/01/2026 – Creada base de dades i col·lecció Entrades a MongoDB Atlas.
+04/01/2026 – Generat fitxer JSON amb 25 registres i importat a la col·lecció.
+04/01/2026 – Fet proves de filtres i consultes amb mongosh i Compass.
+04/01/2026 – Connectada l’aplicació Java amb la BBDD.
+
