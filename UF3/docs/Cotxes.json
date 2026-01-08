@@ -1,0 +1,202 @@
+[
+  {
+    "marca": "BMW",
+    "model": "M340i",
+    "matricula": "1234ABC",
+    "dataRegistre": { "$date": "2024-01-03T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Motor potent, acabats M Performance."
+  },
+  {
+    "marca": "Audi",
+    "model": "S5 Sportback",
+    "matricula": "2345BCD",
+    "dataRegistre": { "$date": "2024-01-05T00:00:00Z" },
+    "disponible": false,
+    "observacions": "Tracció quattro, molt equilibrat."
+  },
+  {
+    "marca": "Mercedes",
+    "model": "CLA 35 AMG",
+    "matricula": "3456CDE",
+    "dataRegistre": { "$date": "2024-01-07T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Esportiu compacte amb bon equipament."
+  },
+  {
+    "marca": "Volkswagen",
+    "model": "Golf R",
+    "matricula": "4567DEF",
+    "dataRegistre": { "$date": "2024-01-10T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Tracció total i molt divertit."
+  },
+  {
+    "marca": "Cupra",
+    "model": "Formentor VZ",
+    "matricula": "5678EFG",
+    "dataRegistre": { "$date": "2024-01-12T00:00:00Z" },
+    "disponible": false,
+    "observacions": "SUV esportiu amb caràcter."
+  },
+  {
+    "marca": "Mazda",
+    "model": "CX-60",
+    "matricula": "6789FGH",
+    "dataRegistre": { "$date": "2024-01-14T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Interior premium i motor potent."
+  },
+  {
+    "marca": "Alfa Romeo",
+    "model": "Giulia Veloce",
+    "matricula": "7890GHI",
+    "dataRegistre": { "$date": "2024-01-16T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Conducció molt esportiva."
+  },
+  {
+    "marca": "Peugeot",
+    "model": "508 PSE",
+    "matricula": "8901HIJ",
+    "dataRegistre": { "$date": "2024-01-18T00:00:00Z" },
+    "disponible": false,
+    "observacions": "Híbrid esportiu amb 360 CV."
+  },
+  {
+    "marca": "Skoda",
+    "model": "Octavia RS",
+    "matricula": "9012IJK",
+    "dataRegistre": { "$date": "2024-01-20T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Molt espai i bones prestacions."
+  },
+  {
+    "marca": "Ford",
+    "model": "Focus ST",
+    "matricula": "0123JKL",
+    "dataRegistre": { "$date": "2024-01-22T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Esportiu clàssic, molt divertit."
+  },
+  {
+    "marca": "Hyundai",
+    "model": "i30 N",
+    "matricula": "1234KLM",
+    "dataRegistre": { "$date": "2024-01-24T00:00:00Z" },
+    "disponible": false,
+    "observacions": "So esportiu i xassís molt afinat."
+  },
+  {
+    "marca": "Kia",
+    "model": "Stinger GT",
+    "matricula": "2345LMN",
+    "dataRegistre": { "$date": "2024-01-26T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Gran berlina amb tracció posterior."
+  },
+  {
+    "marca": "Volvo",
+    "model": "S60 T8",
+    "matricula": "3456MNP",
+    "dataRegistre": { "$date": "2024-01-28T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Híbrid potent i molt segur."
+  },
+  {
+    "marca": "Tesla",
+    "model": "Model 3 Performance",
+    "matricula": "4567NPQ",
+    "dataRegistre": { "$date": "2024-01-30T00:00:00Z" },
+    "disponible": false,
+    "observacions": "Acceleració brutal, 100% elèctric."
+  },
+  {
+    "marca": "BMW",
+    "model": "X3 M40i",
+    "matricula": "5678PQR",
+    "dataRegistre": { "$date": "2024-02-01T00:00:00Z" },
+    "disponible": true,
+    "observacions": "SUV potent i molt còmode."
+  },
+  {
+    "marca": "Audi",
+    "model": "A6 55 TFSI",
+    "matricula": "6789QRS",
+    "dataRegistre": { "$date": "2024-02-03T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Berlina premium molt equipada."
+  },
+  {
+    "marca": "Mercedes",
+    "model": "C 300",
+    "matricula": "7890RST",
+    "dataRegistre": { "$date": "2024-02-05T00:00:00Z" },
+    "disponible": false,
+    "observacions": "Confort i tecnologia avançada."
+  },
+  {
+    "marca": "Seat",
+    "model": "Leon Cupra",
+    "matricula": "8901STU",
+    "dataRegistre": { "$date": "2024-02-07T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Esportiu pràctic per al dia a dia."
+  },
+  {
+    "marca": "Toyota",
+    "model": "GR Yaris",
+    "matricula": "9012TUV",
+    "dataRegistre": { "$date": "2024-02-09T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Tracció total i esperit rally."
+  },
+  {
+    "marca": "Mini",
+    "model": "John Cooper Works",
+    "matricula": "0123UVW",
+    "dataRegistre": { "$date": "2024-02-11T00:00:00Z" },
+    "disponible": false,
+    "observacions": "Petit però molt esportiu."
+  },
+  {
+    "marca": "Lexus",
+    "model": "IS 300h F Sport",
+    "matricula": "1234VWX",
+    "dataRegistre": { "$date": "2024-02-13T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Híbrid fiable amb toc esportiu."
+  },
+  {
+    "marca": "Renault",
+    "model": "Megane RS",
+    "matricula": "2345WXY",
+    "dataRegistre": { "$date": "2024-02-15T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Xassís Cup, molt precís."
+  },
+  {
+    "marca": "Opel",
+    "model": "Insignia GSi",
+    "matricula": "3456XYZ",
+    "dataRegistre": { "$date": "2024-02-17T00:00:00Z" },
+    "disponible": false,
+    "observacions": "Berlina esportiva discreta."
+  },
+  {
+    "marca": "Subaru",
+    "model": "WRX",
+    "matricula": "4567YZA",
+    "dataRegistre": { "$date": "2024-02-19T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Tracció total permanent."
+  },
+  {
+    "marca": "Honda",
+    "model": "Civic Type R",
+    "matricula": "5678ZAB",
+    "dataRegistre": { "$date": "2024-02-21T00:00:00Z" },
+    "disponible": true,
+    "observacions": "Un dels millors tracció davantera."
+  }
+]
